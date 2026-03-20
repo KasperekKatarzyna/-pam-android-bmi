@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">zadanie BMI</string>
+    <string name="action_settings">Ustawienia</string>
+
+    <!--Starting view-->
+    <string name="welcome_message"> Witaj w moim kalkulatorze!</string>
+    <string name="start_bmi">Kalkulator Bmi</string>
+
+    <string name="bmi_title">Kalkulator BMI</string>
+    <string name="weight">Waga (kg)</string>
+    <string name="height">Wzrost (cm)</string>
+    <string name="calculate">Oblicz</string>
+    <string name="your_bmi">Twoje BMI wynosi</string>
+    <string name="bmi_interpretation">Interpretacja</string>
+    <string name="underweight">Niedowaga</string>
+    <string name="normal_weight">Waga prawidłowa</string>
+    <string name="overweight">Nadwaga</string>
+    <string name="obesity">Otyłość</string>
+
+    <string name="calorie_title">Dzienne zapotrzebowanie kaloryczne</string>
+    <string name="age">Wiek</string>
+    <string name="gender">Płeć</string>
+    <string name="male">Mężczyzna</string>
+    <string name="female">Kobieta</string>
+    <string name="activity_level">Poziom aktywności</string>
+    <string name="low_activity">Niska aktywność</string>
+    <string name="moderate_activity">Średnia aktywność</string>
+    <string name="high_activity">Wysoka aktywność</string>
+    <string name="very_high_activity">Bardzo wysoka aktywność</string>
+    <string name="calculate_calories">Oblicz kalorie</string>
+    <string name="your_calories">Twoje dzienne zapotrzebowanie wynosi</string>
+    <string name="kcal">kcal</string>
+
+    <string name="go_to_bmi">Przejdź do BMI</string>
+    <string name="go_to_calories">Przejdź do kalorii</string>
+    <string name="back_to_start">Powrót do ekranu startowego</string>
+    <string name="enter_all_fields">Uzupełnij wszystkie pola</string>
+    <string name="app_subtitle">BMI i kalorie w jednej aplikacji</string>
+
+
+
+
+</resources>

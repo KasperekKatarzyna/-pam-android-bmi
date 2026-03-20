@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/startImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="24dp"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Grafika startowa" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Witaj w aplikacji BMI i kalorii"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI i kalorie w jednej aplikacji"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/buttonBmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Przejdź do BMI"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/buttonCalories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Przejdź do kalorii" />
+
+</LinearLayout>

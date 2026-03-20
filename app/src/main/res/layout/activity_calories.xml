@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalkulator kalorii"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Wiek"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editCaloriesWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Waga (kg)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/editCaloriesHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Wzrost (cm)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/buttonCalculateCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oblicz kalorie"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/textCaloriesResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/buttonBackFromCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Powrót" />
+
+    </LinearLayout>
+</ScrollView>
