@@ -11,7 +11,7 @@ Aplikacja umożliwia:
 - interpretację wyniku BMI
 - podejrzenie przykładowej historii BMI na wykresie
 - obliczenie dziennego zapotrzebowania kalorycznego
-- korzystanie z listy zakupów dla przepisu z możliwością odznaczania produktów
+- korzystanie z listy zakupów 
 
 Użytkownik może wprowadzić swoje dane i otrzymać szybkie wyniki wraz z interpretacją.
 
@@ -49,7 +49,7 @@ Użytkownik może wprowadzić swoje dane i otrzymać szybkie wyniki wraz z inter
 
 ---
 
-## 🧮 Wzory
+##  Wzory
 ### Wzór Harrisa-Benedicta
 
 **Kobieta:**
