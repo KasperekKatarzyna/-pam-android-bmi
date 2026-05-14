@@ -76,7 +76,7 @@ BMI = masa / (wzrost × wzrost)
 ![Calories](screenshots/calories.png)
 
 ### Wynik Monkey
-![Monkey Test Result](screenshots/monkey-result.png)
+![Monkey Test Result](screenshots/monkeyresult.png)
 
 ---
 
