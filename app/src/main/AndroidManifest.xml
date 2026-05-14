@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZadanieBMI">
 
+        <activity android:name=".ShoppingListActivity" />
         <activity android:name=".CaloriesActivity" />
         <activity android:name=".BmiActivity" />
         <activity

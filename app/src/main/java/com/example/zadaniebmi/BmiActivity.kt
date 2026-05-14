@@ -27,19 +27,19 @@ class BmiActivity : AppCompatActivity() {
         buttonBack = findViewById(R.id.buttonBackFromBmi)
 
         buttonCalculate.setOnClickListener {
-            val weightText = editWeight.text.toString()
-            val heightText = editHeight.text.toString()
+            val weight = editWeight.text.toString().toDoubleOrNull()
+            val height = editHeight.text.toString().toDoubleOrNull()
 
-            if (weightText.isNotEmpty() && heightText.isNotEmpty()) {
-                val weight = weightText.toDouble()
-                val height = heightText.toDouble()
+            if (weight != null && height != null && weight > 0 && height > 0) {
+                val bmi = BmiCalculator.calculate(weight, height)
 
-                val bmi = weight / Math.pow(height / 100.0, 2.0)
-
-                textResult.text = "Twoje BMI wynosi: %.2f".format(bmi)
-                textInterpretation.text = "Interpretacja: ${getBmiInterpretation(bmi)}"
+                textResult.text = getString(R.string.bmi_result_format, bmi)
+                textInterpretation.text = getString(
+                    R.string.bmi_interpretation_format,
+                    BmiCalculator.interpret(bmi)
+                )
             } else {
-                textResult.text = "Uzupełnij wszystkie pola"
+                textResult.text = getString(R.string.invalid_bmi_values)
                 textInterpretation.text = ""
             }
         }
@@ -49,12 +49,4 @@ class BmiActivity : AppCompatActivity() {
         }
     }
 
-    private fun getBmiInterpretation(bmi: Double): String {
-        return when {
-            bmi < 18.5 -> "Niedowaga"
-            bmi < 25.0 -> "Waga prawidłowa"
-            bmi < 30.0 -> "Nadwaga"
-            else -> "Otyłość"
-        }
-    }
 }

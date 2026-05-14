@@ -32,46 +32,31 @@ class CaloriesActivity : AppCompatActivity() {
         textCaloriesResult = findViewById(R.id.textCaloriesResult)
         buttonBack = findViewById(R.id.buttonBackFromCalories)
 
-        val genderOptions = arrayOf("Mężczyzna", "Kobieta")
-        val activityOptions = arrayOf(
-            "Niska aktywność",
-            "Średnia aktywność",
-            "Wysoka aktywność",
-            "Bardzo wysoka aktywność"
-        )
+        val genderOptions = resources.getStringArray(R.array.gender_options)
+        val activityOptions = resources.getStringArray(R.array.activity_options)
 
         spinnerGender.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, genderOptions)
         spinnerActivity.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, activityOptions)
 
         buttonCalculate.setOnClickListener {
-            val ageText = editAge.text.toString()
-            val weightText = editWeight.text.toString()
-            val heightText = editHeight.text.toString()
+            val age = editAge.text.toString().toIntOrNull()
+            val weight = editWeight.text.toString().toDoubleOrNull()
+            val height = editHeight.text.toString().toDoubleOrNull()
 
-            if (ageText.isNotEmpty() && weightText.isNotEmpty() && heightText.isNotEmpty()) {
-                val age = ageText.toInt()
-                val weight = weightText.toDouble()
-                val height = heightText.toDouble()
-                val gender = spinnerGender.selectedItem.toString()
-                val activity = spinnerActivity.selectedItem.toString()
-
-                val bmr = if (gender == "Mężczyzna") {
+            if (age != null && weight != null && height != null && age > 0 && weight > 0 && height > 0) {
+                val bmr = if (spinnerGender.selectedItemPosition == 0) {
                     66.5 + (13.75 * weight) + (5.003 * height) - (6.775 * age)
                 } else {
                     655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
                 }
 
-                val activityFactor = when (activity) {
-                    "Niska aktywność" -> 1.2
-                    "Średnia aktywność" -> 1.55
-                    "Wysoka aktywność" -> 1.725
-                    else -> 1.9
-                }
+                val activityFactors = doubleArrayOf(1.2, 1.55, 1.725, 1.9)
+                val activityFactor = activityFactors[spinnerActivity.selectedItemPosition]
 
                 val calories = bmr * activityFactor
-                textCaloriesResult.text = "Dzienne zapotrzebowanie: %.2f kcal".format(calories)
+                textCaloriesResult.text = getString(R.string.calories_result_format, calories)
             } else {
-                textCaloriesResult.text = "Uzupełnij wszystkie pola"
+                textCaloriesResult.text = getString(R.string.invalid_calorie_values)
             }
         }
 

@@ -1,43 +1,57 @@
 <resources>
     <string name="app_name">zadanie BMI</string>
-    <string name="action_settings">Ustawienia</string>
-
-    <!--Starting view-->
-    <string name="welcome_message"> Witaj w moim kalkulatorze!</string>
-    <string name="start_bmi">Kalkulator Bmi</string>
+    <!-- Starting view -->
+    <string name="welcome_message">Witaj w aplikacji BMI i kalorii</string>
+    <string name="start_image_description">Grafika startowa</string>
 
     <string name="bmi_title">Kalkulator BMI</string>
     <string name="weight">Waga (kg)</string>
     <string name="height">Wzrost (cm)</string>
-    <string name="calculate">Oblicz</string>
-    <string name="your_bmi">Twoje BMI wynosi</string>
-    <string name="bmi_interpretation">Interpretacja</string>
-    <string name="underweight">Niedowaga</string>
-    <string name="normal_weight">Waga prawidłowa</string>
-    <string name="overweight">Nadwaga</string>
-    <string name="obesity">Otyłość</string>
+    <string name="calculate_bmi">Oblicz BMI</string>
+    <string name="bmi_result_format">Twoje BMI wynosi: %.2f</string>
+    <string name="bmi_interpretation_format">Interpretacja: %1$s</string>
+    <string name="invalid_bmi_values">Podaj poprawną wagę i wzrost</string>
+    <string name="bmi_chart_title">Przykładowa historia BMI</string>
+    <string name="bmi_chart_description">Wykres liniowy pokazujący przykładowe zmiany BMI w czasie</string>
 
     <string name="calorie_title">Dzienne zapotrzebowanie kaloryczne</string>
     <string name="age">Wiek</string>
-    <string name="gender">Płeć</string>
     <string name="male">Mężczyzna</string>
     <string name="female">Kobieta</string>
-    <string name="activity_level">Poziom aktywności</string>
     <string name="low_activity">Niska aktywność</string>
     <string name="moderate_activity">Średnia aktywność</string>
     <string name="high_activity">Wysoka aktywność</string>
     <string name="very_high_activity">Bardzo wysoka aktywność</string>
     <string name="calculate_calories">Oblicz kalorie</string>
-    <string name="your_calories">Twoje dzienne zapotrzebowanie wynosi</string>
-    <string name="kcal">kcal</string>
+    <string name="calories_result_format">Dzienne zapotrzebowanie: %.2f kcal</string>
+    <string name="invalid_calorie_values">Podaj poprawny wiek, wagę i wzrost</string>
 
     <string name="go_to_bmi">Przejdź do BMI</string>
     <string name="go_to_calories">Przejdź do kalorii</string>
-    <string name="back_to_start">Powrót do ekranu startowego</string>
-    <string name="enter_all_fields">Uzupełnij wszystkie pola</string>
+    <string name="go_to_shopping_list">Lista zakupów</string>
+    <string name="back">Powrót</string>
     <string name="app_subtitle">BMI i kalorie w jednej aplikacji</string>
+    <string name="placeholder_fragment_first">Ekran pomocniczy 1</string>
+    <string name="placeholder_fragment_second">Ekran pomocniczy 2</string>
 
-
-
-
+    <string name="shopping_title">Lista zakupów</string>
+    <string name="shopping_recipe">Przepis: sałatka z kurczakiem</string>
+    <string name="shopping_list_description">Lista zakupów z możliwością odznaczania kupionych produktów</string>
+    <string name="shopping_item_format">%1$s - %2$s</string>
+    <string name="shopping_chicken">Pierś z kurczaka</string>
+    <string name="shopping_salad_mix">Mix sałat</string>
+    <string name="shopping_tomato">Pomidor</string>
+    <string name="shopping_cucumber">Ogórek</string>
+    <string name="shopping_pepper">Papryka</string>
+    <string name="shopping_yogurt">Jogurt naturalny</string>
+    <string name="shopping_olive_oil">Oliwa z oliwek</string>
+    <string name="shopping_bread">Pełnoziarniste pieczywo</string>
+    <string name="amount_chicken">400 g</string>
+    <string name="amount_salad_mix">1 opakowanie</string>
+    <string name="amount_tomato">2 szt.</string>
+    <string name="amount_cucumber">1 szt.</string>
+    <string name="amount_pepper">1 szt.</string>
+    <string name="amount_yogurt">150 g</string>
+    <string name="amount_olive_oil">2 łyżki</string>
+    <string name="amount_bread">2 kromki</string>
 </resources>

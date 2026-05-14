@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kalkulator kalorii"
+            android:text="@string/calorie_title"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
@@ -22,7 +22,8 @@
             android:id="@+id/editAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Wiek"
+            android:hint="@string/age"
+            android:importantForAutofill="no"
             android:inputType="number"
             android:layout_marginBottom="12dp" />
 
@@ -30,7 +31,8 @@
             android:id="@+id/editCaloriesWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Waga (kg)"
+            android:hint="@string/weight"
+            android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:layout_marginBottom="12dp" />
 
@@ -38,7 +40,8 @@
             android:id="@+id/editCaloriesHeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Wzrost (cm)"
+            android:hint="@string/height"
+            android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:layout_marginBottom="12dp" />
 
@@ -58,7 +61,7 @@
             android:id="@+id/buttonCalculateCalories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Oblicz kalorie"
+            android:text="@string/calculate_calories"
             android:layout_marginBottom="16dp" />
 
         <TextView
@@ -72,7 +75,7 @@
             android:id="@+id/buttonBackFromCalories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Powrót" />
+            android:text="@string/back" />
 
     </LinearLayout>
 </ScrollView>

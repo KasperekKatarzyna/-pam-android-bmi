@@ -1,60 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_horizontal">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kalkulator BMI"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="24dp" />
-
-    <EditText
-        android:id="@+id/editWeight"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Waga (kg)"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="12dp" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/editHeight"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wzrost (cm)"
-        android:inputType="numberDecimal"
-        android:layout_marginBottom="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="@string/bmi_title"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonCalculateBmi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Oblicz BMI"
-        android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/editWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="@string/weight"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/textBmiResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        <EditText
+            android:id="@+id/editHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/height"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal" />
 
-    <TextView
-        android:id="@+id/textBmiInterpretation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:layout_marginBottom="24dp" />
+        <Button
+            android:id="@+id/buttonCalculateBmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/calculate_bmi" />
 
-    <Button
-        android:id="@+id/buttonBackFromBmi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Powrót" />
+        <TextView
+            android:id="@+id/textBmiResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="18sp" />
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/textBmiInterpretation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/bmi_chart_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <com.example.zadaniebmi.BmiChartView
+            android:id="@+id/bmiChart"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/bmi_chart_description" />
+
+        <Button
+            android:id="@+id/buttonBackFromBmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back" />
+
+    </LinearLayout>
+</ScrollView>

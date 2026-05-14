@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var buttonBmi: Button
     private lateinit var buttonCalories: Button
+    private lateinit var buttonShoppingList: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonBmi = findViewById(R.id.buttonBmi)
         buttonCalories = findViewById(R.id.buttonCalories)
+        buttonShoppingList = findViewById(R.id.buttonShoppingList)
 
         buttonBmi.setOnClickListener {
             val intent = Intent(this, BmiActivity::class.java)
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
 
         buttonCalories.setOnClickListener {
             val intent = Intent(this, CaloriesActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonShoppingList.setOnClickListener {
+            val intent = Intent(this, ShoppingListActivity::class.java)
             startActivity(intent)
         }
     }

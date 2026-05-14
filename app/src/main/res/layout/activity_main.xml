@@ -11,14 +11,14 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginBottom="24dp"
-        android:src="@mipmap/ic_launcher"
-        android:contentDescription="Grafika startowa" />
+        android:contentDescription="@string/start_image_description"
+        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Witaj w aplikacji BMI i kalorii"
+        android:text="@string/welcome_message"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp" />
@@ -27,7 +27,7 @@
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BMI i kalorie w jednej aplikacji"
+        android:text="@string/app_subtitle"
         android:textSize="16sp"
         android:layout_marginBottom="24dp" />
 
@@ -35,13 +35,20 @@
         android:id="@+id/buttonBmi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Przejdź do BMI"
+        android:text="@string/go_to_bmi"
         android:layout_marginBottom="12dp" />
 
     <Button
         android:id="@+id/buttonCalories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Przejdź do kalorii" />
+        android:layout_marginBottom="12dp"
+        android:text="@string/go_to_calories" />
+
+    <Button
+        android:id="@+id/buttonShoppingList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_shopping_list" />
 
 </LinearLayout>

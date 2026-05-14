@@ -1,0 +1,13 @@
+<resources>
+    <string-array name="gender_options">
+        <item>@string/male</item>
+        <item>@string/female</item>
+    </string-array>
+
+    <string-array name="activity_options">
+        <item>@string/low_activity</item>
+        <item>@string/moderate_activity</item>
+        <item>@string/high_activity</item>
+        <item>@string/very_high_activity</item>
+    </string-array>
+</resources>

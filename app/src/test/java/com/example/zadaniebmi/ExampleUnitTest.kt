@@ -1,17 +1,25 @@
 package com.example.zadaniebmi
 
+import org.junit.Assert.*
 import org.junit.Test
 
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
+class BmiCalculatorTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun calculate_returnsExpectedBmiForValidWeightAndHeight() {
+        val bmi = BmiCalculator.calculate(weightKg = 70.0, heightCm = 175.0)
+
+        assertEquals(22.86, bmi, 0.01)
+    }
+
+    @Test
+    fun interpret_returnsNormalWeightForBmiInHealthyRange() {
+        val interpretation = BmiCalculator.interpret(22.86)
+
+        assertEquals("Waga prawidłowa", interpretation)
+    }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun calculate_throwsExceptionForZeroHeight() {
+        BmiCalculator.calculate(weightKg = 70.0, heightCm = 0.0)
     }
 }

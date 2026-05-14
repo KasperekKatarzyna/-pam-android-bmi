@@ -9,7 +9,9 @@ Aplikacja mobilna napisana w Kotlinie w Android Studio.
 Aplikacja umożliwia:
 - obliczenie wskaźnika BMI
 - interpretację wyniku BMI
+- podejrzenie przykładowej historii BMI na wykresie
 - obliczenie dziennego zapotrzebowania kalorycznego
+- korzystanie z listy zakupów dla przepisu z możliwością odznaczania produktów
 
 Użytkownik może wprowadzić swoje dane i otrzymać szybkie wyniki wraz z interpretacją.
 
@@ -31,6 +33,19 @@ Użytkownik może wprowadzić swoje dane i otrzymać szybkie wyniki wraz z inter
     - wzrostu
     - płci
     - poziomu aktywności fizycznej
+- przykładowy wykres zmian BMI w czasie
+- lista zakupów oparta o RecyclerView
+
+---
+
+## Testy i raporty
+
+- Test jednostkowy JUnit: `./gradlew testDebugUnitTest`
+- Test Espresso: `./gradlew connectedDebugAndroidTest`
+- Raport lint przed poprawkami: `reports/lint-before-fixes.html`
+- Raport lint po poprawkach: `reports/lint-after-fixes.html`
+- Wynik Monkey: `reports/monkey-result.txt`
+- Zrzut ekranu po Monkey: `screenshots/monkey-result.png`
 
 ---
 

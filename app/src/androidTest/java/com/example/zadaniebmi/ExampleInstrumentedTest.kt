@@ -1,24 +1,42 @@
 package com.example.zadaniebmi
 
-import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.closeSoftKeyboard
+import androidx.test.espresso.action.ViewActions.typeText
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.isChecked
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import org.hamcrest.CoreMatchers.containsString
 import org.junit.Test
 import org.junit.runner.RunWith
 
-import org.junit.Assert.*
-
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class MainActivityEspressoTest {
     @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.example.zadaniebmi", appContext.packageName)
+    fun bmiCalculatorShowsResultAfterEnteringData() {
+        ActivityScenario.launch(MainActivity::class.java).use {
+            onView(withId(R.id.buttonBmi)).perform(click())
+            onView(withId(R.id.editWeight)).perform(typeText("70"), closeSoftKeyboard())
+            onView(withId(R.id.editHeight)).perform(typeText("175"), closeSoftKeyboard())
+            onView(withId(R.id.buttonCalculateBmi)).perform(click())
+
+            onView(withId(R.id.textBmiResult)).check(matches(withText(containsString("22"))))
+            onView(withId(R.id.textBmiInterpretation))
+                .check(matches(withText(containsString("Waga prawidłowa"))))
+        }
+    }
+
+    @Test
+    fun shoppingListItemCanBeMarkedAsPurchased() {
+        ActivityScenario.launch(MainActivity::class.java).use {
+            onView(withId(R.id.buttonShoppingList)).perform(click())
+            onView(withText(containsString("Pomidor"))).perform(click())
+
+            onView(withText(containsString("Pomidor"))).check(matches(isChecked()))
+        }
     }
 }
