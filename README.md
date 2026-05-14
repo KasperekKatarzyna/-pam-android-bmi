@@ -75,6 +75,9 @@ BMI = masa / (wzrost × wzrost)
 ### Kalkulator kalorii
 ![Calories](screenshots/calories.png)
 
+### Wynik Monkey
+![Monkey Test Result](screen/monkey-result.png)
+
 ---
 
 ## Technologie
